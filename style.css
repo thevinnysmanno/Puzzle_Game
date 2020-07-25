@@ -1,0 +1,100 @@
+:root {
+	/* Sets board size to 3x the size of --picture-size */
+	--picture-size: 200px; 
+}
+
+body {
+	background-color: grey;
+	height: 100vh;
+}
+
+h1 {
+	text-align: center;
+	color: white;
+	font-size: 50px;
+}
+
+#board {
+	display: grid;
+ 	grid-template-columns: 
+ 		var(--picture-size) var(--picture-size) var(--picture-size);
+ 	padding: 0px;
+ 	grid-row-gap: 0;
+ 	justify-content: center;
+ 	visibility: visible;
+}
+
+.square {
+	width: var(--picture-size);
+	height: var(--picture-size);	
+}
+
+.square.selected {
+	box-shadow: 0 0 10px 10px yellow;
+	z-index: 1;
+}
+
+.square:hover, .square:active {
+	box-shadow: 0 0 10px 10px white;
+	z-index: 1;
+}
+
+.square img {
+	width: var(--picture-size);
+	height: var(--picture-size);
+}
+
+#button {
+	margin: 10px;
+	padding: 10px;
+    width:20%;
+    margin-left:40%;
+    margin-right:40%;
+    background-color: white;
+    border: none;
+    font-size: 20px;
+}
+
+#button:focus {
+	outline: none; 
+}
+
+#one {
+	content: url(./Split_Img/topLeft.jpg);
+	order: 1;
+}
+#two {
+	content: url(./Split_Img/topCenter.jpg);
+	order: 2;
+}
+#three {
+	content: url(./Split_Img/topRight.jpg);
+	order: 3;
+}
+#four {
+	content: url(./Split_Img/midLeft.jpg);
+	order: 4;
+}
+#five {
+	content: url(./Split_Img/midCenter.jpg);
+	order: 5;
+}
+#six {
+	content: url(./Split_Img/midRight.jpg);
+	order: 6;
+}
+#seven {
+	content: url(./Split_Img/bottomLeft.jpg);
+	order: 7;
+}
+#eight {
+	content: url(./Split_Img/bottomCenter.jpg);
+	order: 8;
+}
+#nine {
+	content: url(./Split_Img/bottomRight.jpg);
+	order: 9;
+}
+
+
+

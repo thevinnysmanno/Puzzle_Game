@@ -1,26 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Puzzle Game</title>
-	<link rel="stylesheet" type="text/css" href="./main.css">
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<script type="text/javascript" src="./logic.js" async></script>
 </head>
 <body>
 
 	<h1>Puzzle Game</h1>
-
-	<div class="board">
+	
+	<div id="board">
 		<!-- Top Row -->
-		<div class="square"><img id="one" src="./Split_Img/topLeft.jpg"></div>
-		<div class="square"><img id="two" src="./Split_Img/topCenter.jpg"></div>
-		<div class="square"><img id="three" src="./Split_Img/topRight.jpg"></div>
+		<div class="square" id="0"><img id="one"></div>
+		<div class="square" id="1"><img id="two"></div>
+		<div class="square" id="2"><img id="three"></div>
 		<!-- Middle Row -->
-		<div class="square"><img id="four" src="./Split_Img/midLeft.jpg"></div>
-		<div class="square"><img id="five" src="./Split_Img/midCenter.jpg"></div>
-		<div class="square"><img id="six" src="./Split_Img/midRight.jpg"></div>
+		<div class="square" id="3"><img id="four"></div>
+		<div class="square" id="4"><img id="five"></div>
+		<div class="square" id="5"><img id="six"></div>
 		<!-- Bottom Row -->
-		<div class="square"><img id="seven" src="./Split_Img/bottomLeft.jpg"></div>
-		<div class="square"><img id="eight" src="./Split_Img/bottomCenter.jpg"></div>
-		<div class="square"><img id="nine" src="./Split_Img/bottomRight.jpg"></div>
-	</div>	
+		<div class="square" id="6"><img id="seven"></div>
+		<div class="square" id="7"><img id="eight"></div>
+		<div class="square" id="8"><img id="nine"></div>
+	</div>
+	<div>
+		<button id="button">Play</button>
+	</div>
+
 </body>
 </html>
