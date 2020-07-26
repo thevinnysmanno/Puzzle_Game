@@ -4,19 +4,14 @@ const button = document.querySelector('#button');
 let hasSelected = false;
 let first, second; 
 let counter = 0;
-const answerArr = [0,1,2,3,4,5,6,7,8]
 
 // Checks if user has solved the puzzle
 function checkSolved() {
-	for (i=0;i<9;i++) {
-		position = document.getElementById(i.toString());
-		console.log(position);
-		if (position.style.order === i) { 
-			i++;
-			console.log("Made it!"); } 
-		else { return false; }
-	}
-	return true;
+
+	const checkSquares = [...document.querySelectorAll('div .square')];
+	const check = (square) => square.id === square.style.order;
+	
+	return checkSquares.every(check);
 }
 
 // Card selection functionality
@@ -42,12 +37,13 @@ function selectCard() {
 		first.style.order = second.style.order;
 		second.style.order = temp;
 		counter++;
-	}
-	// Runs each time to see if user has completed the puzzle
-	if(checkSolved()) { 
-		alert("Congratulations!!! You won in " + counter + " moves!!");
-		counter = 0;
-		button.style.visibility = "visible";
+	
+		// Runs each time to see if user has completed the puzzle
+		if(checkSolved()) {
+			alert("Congratulations!!! You won in " + counter + " moves!!");
+			counter = 0;
+			button.style.visibility = "visible";
+		}
 	}
 }
 
@@ -67,10 +63,10 @@ function scrambleBoard() {
 		numArr.splice(randomNumber, 1);
 	}
 	// Shuffles the board according to the random array
-	let e = 0;
+	let o = 0;
 	squares.forEach(square => {
-		square.style.order = arr[e];
-		e++;
+		square.style.order = arr[o];
+		o++;
 	});
     button.style.visibility = "visible" ? "hidden" : "visible";
 }

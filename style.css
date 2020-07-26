@@ -2,6 +2,12 @@
 	/* Sets board size to 3x the size of --picture-size */
 	--picture-size: 200px; 
 }
+@media (max-width: 600px) {
+	:root {
+		/* Sets board size to 3x the size of --picture-size */
+		--picture-size: 150px; 
+	}	
+}
 
 body {
 	background-color: grey;
@@ -55,46 +61,17 @@ h1 {
     font-size: 20px;
 }
 
-#button:focus {
-	outline: none; 
-}
+#button:focus { outline: none; }
 
-#one {
-	content: url(./Split_Img/topLeft.jpg);
-	order: 1;
-}
-#two {
-	content: url(./Split_Img/topCenter.jpg);
-	order: 2;
-}
-#three {
-	content: url(./Split_Img/topRight.jpg);
-	order: 3;
-}
-#four {
-	content: url(./Split_Img/midLeft.jpg);
-	order: 4;
-}
-#five {
-	content: url(./Split_Img/midCenter.jpg);
-	order: 5;
-}
-#six {
-	content: url(./Split_Img/midRight.jpg);
-	order: 6;
-}
-#seven {
-	content: url(./Split_Img/bottomLeft.jpg);
-	order: 7;
-}
-#eight {
-	content: url(./Split_Img/bottomCenter.jpg);
-	order: 8;
-}
-#nine {
-	content: url(./Split_Img/bottomRight.jpg);
-	order: 9;
-}
+#one { content: url(./Split_Img/topLeft.jpg); }
+#two { content: url(./Split_Img/topCenter.jpg); }
+#three { content: url(./Split_Img/topRight.jpg); }
+#four { content: url(./Split_Img/midLeft.jpg); }
+#five { content: url(./Split_Img/midCenter.jpg); }
+#six { content: url(./Split_Img/midRight.jpg); }
+#seven { content: url(./Split_Img/bottomLeft.jpg); }
+#eight { content: url(./Split_Img/bottomCenter.jpg); }
+#nine { content: url(./Split_Img/bottomRight.jpg); }
 
 
 
